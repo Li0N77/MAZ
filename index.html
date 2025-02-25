@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coded By Li0N</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            direction: rtl; 
+            text-align: right; 
+            background-color: #1d1d1d; 
+            color: aliceblue; 
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        h1, h2, h3, h4 {
+            text-align: center;
+            color: #f39c12;
+        }
+        .question { 
+            margin: 20px; 
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+        }
+        .question p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .question input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .question input[type="radio"]:checked {
+            background-color: #cecece;
+            border-color: #cecece;
+        }
+        .question input[type="radio"]:hover {
+            border-color: #cecece;
+        }
+        .result { 
+            font-weight: bold; 
+            color: #2ecc71; 
+        }
+        .correct {
+            color: #2ecc71 !important;
+            font-weight: bold;
+        }
+        .wrong {
+            color: #e74c3c !important;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2e2e2e;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #e67e22;
+        }
+        #score {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        #showAnswers {
+            margin: 20px auto;
+            display: none;
+        }
+        .Li0NDiv {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Li0NDiv">
+        <h1>محاكاه لـ الاختبار الشامل من معهد ماز</h1>
+        <h3>Coded By Li0N | Tammar Abdulaziz</h3>
+        <h4>X : @t4mmar</h4>
+        <form id="quizForm">
+            <div id="questionsContainer"></div>
+            <button type="button" onclick="submitQuiz()">إرسال الإجابات</button>
+        </form>
+        <h2 id="score"></h2>
+        <button id="showAnswers" onclick="showAnswers()">عرض الإجابات الصحيحة</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
