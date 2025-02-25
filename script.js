@@ -719,7 +719,8 @@ function submitQuiz() {
 
     const percentage = (score / totalQuestions) * 100;
 
-    document.getElementById("score").innerText = `درجتك: ${percentage} من 100`;
+    const roundedPercentage = Math.round(percentage);
+    document.getElementById("score").innerText = `درجتك: ${roundedPercentage} من 100`;
     document.getElementById("showAnswers").style.display = "block";
 }
 
